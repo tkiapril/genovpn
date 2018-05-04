@@ -107,7 +107,7 @@ def main():
     )
 
     try:
-        with Path(clientname + '.ovpn').open('w') as w:
+        with Path(SERVER + '-' + clientname + '.ovpn').open('w') as w:
             w.write(conf)
     except PermissionError:
         print(
